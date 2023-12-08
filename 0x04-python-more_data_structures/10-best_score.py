@@ -9,4 +9,4 @@ def best_score(a_dictionary):
         if y > grand:
             grand = y
             ret = x
-            return ret
+            return (ret)
