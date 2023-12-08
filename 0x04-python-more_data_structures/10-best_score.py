@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if not isinstance(a_dictionary, dict) or len(a_dictionary) == 0:
-        return None
-    
-    ret = list(a_dictionary.keys())[0]
-    grand = a_dictionary[ret]
-    for x, y in a_dictionary.items():
-        if y > grand:
-            grand = y
-            ret = x
-            return (ret)
+    if a_dictionary is None
+    return None
+largest = 0
+large_key = None
+for key, value in a_dictonary.items():
+    if value > largest:
+        largest = value
+        large_key = key
+        return large_key
