@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+import sys
+
 if __name__ == "__main__":
     from sys import argv
     if (len(argv) - 1) == 0:
