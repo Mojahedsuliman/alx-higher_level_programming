@@ -6,3 +6,4 @@ if __name__ == "__main__":
     for i in range(len(argv) - 1):
         sum_a += int(argv[i + 1])
         print("{}".format(sum_a))
+        print(f"Sum of all arguments: {sum_a}")
