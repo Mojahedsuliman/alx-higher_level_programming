@@ -1,20 +1,20 @@
 #!/usr/bin/python3
-    
 
-    """Module: linked_list Contains classes to implement a singly linked list."""
+"""
+Module: linked_list
+
+Contains classes to implement a singly linked list.
+"""
 
 class Node:
-
     """
     Represents a node in a singly linked list.
     """
 
     def __init__(self, data, next_node=None):
-
         """
         Initializes a Node with data and a reference to the next node.
         """
-
         self.data = data
         self.next_node = next_node
 
@@ -90,4 +90,4 @@ class SinglyLinkedList:
         while current:
             result += str(current.data) + "\n"
             current = current.next_node
-            return result.rstrip("\n")
+        return result.rstrip("\n")
