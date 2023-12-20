@@ -2,13 +2,16 @@
 
 def safe_print_list_integers(my_list=[], x=0):
     count = 0
-    for i in range(x):
-        try:
-            if type(my_list[i]) is int:
-                print("{:d}".format(my_list[i]), end="\n" if count == x - 1 else " ")
+    try:
+        for i in my_list:
+            if count >= x:
+                break
+            try:
+                print("{:d}".format(i), end="\n" if count == x - 1 else " ")
                 count += 1
-        except IndexError:
-            break
-    else:
+            except ValueError:
+                continue
+    except TypeError:
+        pass  # Do nothing if the list is not iterable
+    finally:
         return count
-    raise ValueError("x cannot be bigger than the length of my_list")
