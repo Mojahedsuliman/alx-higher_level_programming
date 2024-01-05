@@ -69,6 +69,7 @@ class Rectangle:
         re = "Rectangle(" + str(self.__width)
         re += ", " + str(self.__height) + ")"
         return (re)
+
     def __del__(self):
         """Print deletion message"""
         print("Bye rectangle...")
