@@ -52,25 +52,13 @@ class Rectangle:
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """Representation of rectangle
-        """
         if self.__width == 0 or self.__height == 0:
             return ("")
-
-        re = []
-        for i in range(self.__height):
-            [re.append('#') for j in range(self.__width)]
-            if i != self.__height - 1:
-                re.append("\n")
-        return ("".join(re))
+        return ('\n').join(['#' * self.__width] * self.__height)
 
     def __repr__(self):
-        """Return the Rectangle representation"""
-        re = "Rectangle(" + str(self.__width)
-        re += ", " + str(self.__height) + ")"
-        return (re)
+        return f("Rectangle({self.__width}, {self.__height})")
 
     def __del__(self):
-        """Print deletion message"""
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
