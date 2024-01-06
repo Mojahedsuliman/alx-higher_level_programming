@@ -64,13 +64,13 @@ class Rectangle:
                 re.append("\n")
         return ("".join(re))
 
-     def __repr__(self):
-        """Return representation of the Rectangle."""
+    def __repr__(self):
+        """Return the Rectangle representation"""
         re = "Rectangle(" + str(self.__width)
         re += ", " + str(self.__height) + ")"
         return (re)
 
     def __del__(self):
         """Print deletion message"""
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
