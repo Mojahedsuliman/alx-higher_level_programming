@@ -1,0 +1,26 @@
+Test Cases for he 1-my_list
+
+# Case 1: Empty List Test
+empty_list = MyList()
+print("Empty List Test:")
+empty_list.print_sorted()  # Should print an empty list
+
+# Case 2: Integer List Test
+integer_list = MyList([4, -2, 10, 0, -7])
+print("\nInteger List Test:")
+integer_list.print_sorted()  # Should print integers in ascending order
+
+# Case 3: Floating-point Numbers Test
+float_list = MyList([3.5, -1.2, 0.0, 10.1, -5.7])
+print("\nFloating-point Numbers Test:")
+float_list.print_sorted()  # Should print floats in ascending order
+
+# Case 4: String List Test
+string_list = MyList(["apple", "orange", "banana", "grape"])
+print("\nString List Test:")
+string_list.print_sorted()  # Should print strings in alphabetical order
+
+# Case 5: Mixed Data Types Test
+mixed_list = MyList([2, "dog", -3.5, "cat", 0, 7.8])
+print("\nMixed Data Types Test:")
+mixed_list.print_sorted()  # Should handle and print mixed data types accordingly

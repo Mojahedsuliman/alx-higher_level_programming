@@ -1,0 +1,31 @@
+Test Cases for BaseGeometry Class
+
+## Test Case 1: Testing area() Method
+
+# Rectangle Area Calculation
+1. Create a Rectangle object with width 5 and height 10.
+   - Calculate the area using the area() method.
+   - Expected Result: The area should be 50.
+
+# Square Area Calculation
+2. Create a Square object with side length 7.
+   - Calculate the area using the area() method.
+   - Expected Result: The area should be 49.
+
+## Test Case 2: Integer Validation
+
+# Valid Integer Test
+1. Use the integer_validator() method with a valid integer (e.g., 15).
+   - Expected Result: No exception should be raised.
+
+# Non-Integer Value Test
+2. Use the integer_validator() method with a non-integer value (e.g., "string").
+   - Expected Result: It should raise a TypeError.
+
+# Integer Less Than or Equal to 0 Test
+3. Use the integer_validator() method with an integer less than or equal to 0 (e.g., -5).
+   - Expected Result: It should raise a ValueError.
+
+# last Test Cases
+Feel free to add more test scenarios to cover edge cases or specific scenarios for your BaseGeometry class.
+
