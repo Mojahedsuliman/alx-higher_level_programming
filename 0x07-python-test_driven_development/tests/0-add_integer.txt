@@ -1,0 +1,22 @@
+test cases for the adding file 
+
+# Test case 1: Adding two integers
+Result 1: 15
+
+# Test case 2: Adding an integer and a float
+Result 2: 15
+
+# Test case 3: Adding two floats
+Result 3: 6
+
+# Test case 4: Adding two negative integers
+Result 4: -11
+
+# Test case 5 Error: Passing a non-integer or non-float value
+Result 5: a must be an integer
+
+# Test case 6: Passing a non-integer or non-float value as the second argument
+Result 6 Error: b must be an integer
+
+# Test case 7: Adding two large integers
+Result 7: 10000000000000000000
