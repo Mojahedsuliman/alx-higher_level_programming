@@ -1,0 +1,29 @@
+>>> from your_module_name import text_indentation
+
+# Test case 1: Text with multiple sentences separated by '.', '?', ':'
+>>> text_indentation("Hello. How are you? I'm fine. Thank you.")
+Hello.
+How are you?
+I'm fine.
+Thank you.
+
+# Test case 2: Text with ':' and '!' characters
+>>> text_indentation("This is a test: it should work! Let's see.")
+This is a test:
+it should work!
+Let's see.
+
+# Test case 3: Text with no punctuation
+>>> text_indentation("This text has no punctuation")
+This text has no punctuation
+
+# Test case 4: Empty text input
+>>> text_indentation("")
+(empty output)
+
+# Test case 5: Non-string input (TypeError)
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
