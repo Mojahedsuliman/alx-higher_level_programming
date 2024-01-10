@@ -1,4 +1,4 @@
-test cases for the adding file 
+Test cases for the adding integer
 
 # Test case 1: Adding two integers
 add_integer(5, 10) == 15
@@ -16,15 +16,14 @@ add_integer(-4, -7) == -11
 try:
     add_integer('a', 5)
 except TypeError as e:
-    Error message "a must be an integer"
+    "a must be an integer"
 
 # Test case 6: Passing a non-integer or non-float value for 'b'
 try:
     add_integer(10, 'b')
 except TypeError as e:
-    Error message "b must be an integer"
+     "b must be an integer"
 
 # Test case 7: Adding two large integers
 add_integer(9999999999999999999, 1) == 10000000000000000000
-
 
