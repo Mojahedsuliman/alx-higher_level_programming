@@ -1,26 +1,21 @@
-Test Cases for he 1-my_list
+>>> from your_module_name import MyList
 
-# Case 1: Empty List Test
-empty_list = MyList()
-print("Empty List Test:")
-empty_list.print_sorted()  # Should print an empty list
+# Test case 1: Sorting a list in ascending order
+>>> my_list = MyList([4, 2, 1, 3, 5])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
 
-# Case 2: Integer List Test
-integer_list = MyList([4, -2, 10, 0, -7])
-print("\nInteger List Test:")
-integer_list.print_sorted()  # Should print integers in ascending order
+# Test case 2: Sorting an empty list
+>>> empty_list = MyList()
+>>> empty_list.print_sorted()
+[]
 
-# Case 3: Floating-point Numbers Test
-float_list = MyList([3.5, -1.2, 0.0, 10.1, -5.7])
-print("\nFloating-point Numbers Test:")
-float_list.print_sorted()  # Should print floats in ascending order
+# Test case 3: Sorting a list with negative numbers
+>>> negative_list = MyList([-4, 2, -1, 0, 3, -5])
+>>> negative_list.print_sorted()
+[-5, -4, -1, 0, 2, 3]
 
-# Case 4: String List Test
-string_list = MyList(["apple", "orange", "banana", "grape"])
-print("\nString List Test:")
-string_list.print_sorted()  # Should print strings in alphabetical order
-
-# Case 5: Mixed Data Types Test
-mixed_list = MyList([2, "dog", -3.5, "cat", 0, 7.8])
-print("\nMixed Data Types Test:")
-mixed_list.print_sorted()  # Should handle and print mixed data types accordingly
+# Test case 4: Sorting a list with duplicate elements
+>>> duplicate_list = MyList([4, 2, 1, 3, 5, 2, 4])
+>>> duplicate_list.print_sorted()
+[1, 2, 2, 3, 4, 4, 5]
