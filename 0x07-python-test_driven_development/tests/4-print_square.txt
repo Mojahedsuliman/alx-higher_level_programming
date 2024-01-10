@@ -1,0 +1,30 @@
+>>> Test Cases
+
+# Test case 1: Print a square of size 3
+>>> print_square(3)
+###
+###
+###
+
+# Test case 2: Print a square of size 5
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+
+# Test case 3: Print a square of size 0 (empty)
+>>> print_square(0)
+
+# Test case 4: Size is negative (ValueError)
+>>> print_square(-3)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+# Test case 5: Size is a float (TypeError)
+>>> print_square(2.5)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
