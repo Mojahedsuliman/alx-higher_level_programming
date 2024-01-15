@@ -98,6 +98,7 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print("#", end="")
             print()
+            return
 
     def __str__(self):
         """Return a str"""
