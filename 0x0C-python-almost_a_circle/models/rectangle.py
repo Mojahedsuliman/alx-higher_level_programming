@@ -20,7 +20,7 @@ class Rectangle(Base):
     @property
     def width(self):
         """Getter for width"""
-        return self.__width
+        return (self.__width)
 
     @width.setter
     def width(self, value):
@@ -34,7 +34,7 @@ class Rectangle(Base):
     @property
     def height(self):
         """Getter for height"""
-        return self.__height
+        return (self.__height)
 
     @height.setter
     def height(self, value):
@@ -48,7 +48,7 @@ class Rectangle(Base):
     @property
     def x(self):
         """Getter for x"""
-        return self.__x
+        return (self.__x)
 
     @x.setter
     def x(self, value):
@@ -62,7 +62,7 @@ class Rectangle(Base):
     @property
     def y(self):
         """Getter for y"""
-        return self.__y
+        return (self.__y)
 
     @y.setter
     def y(self, value):
@@ -101,6 +101,6 @@ class Rectangle(Base):
 
     def __str__(self):
         """Return a str"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.x, self.y,
-                                                       self.width, self.height)
+                                                       self.width, self.height))
