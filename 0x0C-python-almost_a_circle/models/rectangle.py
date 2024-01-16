@@ -24,10 +24,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Setter for width"""
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
+        self.validate_positive_integer(value, "width")
         self.__width = value
 
     @property
@@ -38,10 +35,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Setter for height"""
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value <= 0:
-            raise ValueError("height must be > 0")
+        self.validate_positive_integer(value, "height")
         self.__height = value
 
     @property
@@ -52,10 +46,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Setter for x"""
-        if not isinstance(value, int):
-            raise TypeError("x must be an integer")
-        if value < 0:
-            raise ValueError("x must be >= 0")
+        self.validate_non_negative_integer(value, "x")
         self.__x = value
 
     @property
@@ -66,10 +57,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """Setter for y"""
-        if not isinstance(value, int):
-            raise TypeError("y must be an integer")
-        if value < 0:
-            raise ValueError("y must be >= 0")
+        self.validate_non_negative_integer(value, "y")
         self.__y = value
 
 
@@ -93,14 +81,12 @@ class Rectangle(Base):
 
     def display(self):
         """Display the Rectangle instance with #"""
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
+        for _ in range(self.__y):
             print()
-            return
+        for _ in range(self.__height):
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
-        """Return a str"""
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                       self.x, self.y,
-                                                       self.width, self.height))
+        """Return a string representation of the Rectangle instance"""
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+
