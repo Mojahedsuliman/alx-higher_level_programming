@@ -1,9 +1,4 @@
 #!/usr/bin/node
-function callMeMoby(x, theFunction)
-{
-	for (let i = 0; i < x; i++)
-	{
-		theFunction();
-	}
+function callMeMoby(x, theFunction) {
+	theFunction(++x);
 }
-exports = { callMeMoby };
