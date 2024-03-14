@@ -1,7 +1,4 @@
 #!/usr/bin/node
-function addMeMaybe(number, theFunction)
-{
-	const incrementedNumber = (number + 1);
-	theFunction(incrementedNumber);
-}
-exports = { addMeMaybe };
+function addMeMaybe(number, theFunction) {
+	theFunction(++number);
+};
