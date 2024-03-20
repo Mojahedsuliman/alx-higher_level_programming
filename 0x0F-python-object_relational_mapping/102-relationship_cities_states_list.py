@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-script that creates the State “California” with
-the City “San Francisco” from the database
+script that lists all City objects
+from the database hbtn_0e_101_usa
 """
 
 import sys
@@ -23,10 +23,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_state = State(name="California")
-    new_city = City(name="San Francisco", state=new_state)
-    session.add(new_state)
-    session.add(new_city)
-    session.commit()
+    cities = session.query(City).order_by(City.id).all()
+
+    for city in cities:
+        print("{}: {} -> {}".format(city.id, city.name, city.state.name))
 
     session.close()
